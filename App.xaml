@@ -2,8 +2,13 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Plotter"
-             StartupUri="MainWindow.xaml">
+             xmlns:viewModel="clr-namespace:Plotter.ViewModel"
+             xmlns:view="clr-namespace:Plotter.View"
+             >
     <Application.Resources>
-         
+
+        <DataTemplate DataType="{x:Type TypeName=viewModel:PlotterViewModel}">
+            <view:PlotterView/>
+        </DataTemplate>
     </Application.Resources>
 </Application>
